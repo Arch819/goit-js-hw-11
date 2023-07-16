@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-      <button type="submit">Search</button>
-    </form>
-    <div class="gallery">
-      <!-- Картки зображень -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page title</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content-box">
+      <form class="search-form" id="search-form">
+        <div class="search-input-wrapper">
+          <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
     </div>
-    <button type="button" class="load-more">Load more</button>
-  </body>
+  </div>
+  <div class="gallery">
+    <div class="gallery__wrapp content-box">
+    </div>
+    <div class="load"><span class="loader is-hidden"></span></div>
+  </div>
+  <button class="up-btn is-hidden" type="button">
+    <i class="fa-regular fa-circle-up fa-bounce" style="color: #8A2BE2;"></i>
+  </button>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
